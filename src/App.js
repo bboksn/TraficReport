@@ -1,14 +1,19 @@
-import {React} from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import {React,useState} from "react";
+import { Routes, Route} from "react-router-dom";
 import Main from "./Main";
 import About from "./About"
 import Fave from "./Fave"
+import Navbar from './Navbar'
 function App() {
+const [toFrom,setToFrom] = useState({});
+
+
   return (
     <>
-    <h1>app</h1>
+    <h1>Trafic Conditions Report</h1>
+    <Navbar/>
     <Routes>
-      <Route index path="/" element={<Main/>}></Route>
+      <Route index path="/" element={<Main setToFrom={setToFrom}/>}></Route>
       <Route path="about" element={<About/>}></Route>
       <Route path="fave" element={<Fave/>}></Route>
     </Routes>
