@@ -1,7 +1,24 @@
 {
-"locations":[{
-"id":1,
-"to":"ny",
-"from":"nj"
+  "locations": [
+    {
+      "id": 1,
+      "to": "ny",
+      "from": "nj"
+    },
+    {
+      "to": "pa",
+      "from": "ny",
+      "id": 2
+    },
+    {
+      "to": "prospect park brooklyn ny",
+      "from": "luna park brooklyn ny",
+      "id": 3
+    },
+    {
+      "to": "nyc",
+      "from": "ct",
+      "id": 4
+    }
+  ]
 }
-]}

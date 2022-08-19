@@ -15,8 +15,8 @@ const [toFrom,setToFrom] = useState("");
     <Routes>
       {/*using router v6 not 5*/}
       <Route index path="/" element={<Main setToFrom={setToFrom} toFrom={toFrom}/>}></Route>
-      <Route path="about" element={<About/>}></Route>
       <Route path="fave" element={<Fave/>}></Route>
+      <Route path="about" element={<About/>}></Route>
     </Routes>
     </>
    );

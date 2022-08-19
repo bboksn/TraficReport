@@ -32,12 +32,25 @@ export default function Main({toFrom,setToFrom}) {
     console.log(geoFrom)
   }, [toFrom])
   
-
+  //function to add faved locations to the db
+function handleFave(){
+  fetch('http://localhost:3001/locations', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(toFrom),
+})
+  .then((response) => response.json())
+  .then(data=>{
+    console.log(data)
+  })
+}
   
   return (
     <>
     <div>Main</div>
-    <Inputs setToFrom={setToFrom}></Inputs>
+    <Inputs setToFrom={setToFrom} handleFave={handleFave}></Inputs>
     <Conditions geoTo={geoTo} geoFrom={geoFrom} toFrom={toFrom}/>
     </>
   )

@@ -6,8 +6,8 @@ export default function Navbar() {
     <>
     <nav>
     <NavLink to="/">Home</NavLink>
-    <NavLink to="/about">About</NavLink>
     <NavLink to="/fave">Fave</NavLink>
+    <NavLink to="/about">About</NavLink>
     </nav>
     </>
   )
