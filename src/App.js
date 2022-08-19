@@ -13,7 +13,8 @@ const [toFrom,setToFrom] = useState({});
     <h1>Trafic Conditions Report</h1>
     <Navbar/>
     <Routes>
-      <Route index path="/" element={<Main setToFrom={setToFrom}/>}></Route>
+      {/*using router v6 not 5*/}
+      <Route index path="/" element={<Main setToFrom={setToFrom} toFrom={toFrom}/>}></Route>
       <Route path="about" element={<About/>}></Route>
       <Route path="fave" element={<Fave/>}></Route>
     </Routes>
