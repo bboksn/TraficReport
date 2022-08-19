@@ -8,21 +8,23 @@ export default function Conditions({geoTo,geoFrom,toFrom}) {
     .then(data=>setConditionState(data.incidents))
     console.log(conditionState)
    
-  }, [geoFrom])
+  }, [geoTo,geoFrom])
  
   return (
     <>
     <hr />
     <div>Conditions</div>
+    <h2>Going to :{toFrom.to} From: {toFrom.from}</h2>
+    <ol>
     { conditionState.map(e => {
     return(
       <>
-      <h2>Going to :{toFrom.to} From: {toFrom.from}</h2>
-      <p>{e.fullDesc}</p>
+      <li>{e.fullDesc}</li>
       </>
     ) 
   })
 }
+</ol>
 <p>{/*conditionState[0].fullDesc*/}</p>
     
     </>

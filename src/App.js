@@ -5,7 +5,7 @@ import About from "./About"
 import Fave from "./Fave"
 import Navbar from './Navbar'
 function App() {
-const [toFrom,setToFrom] = useState({});
+const [toFrom,setToFrom] = useState("");
 
 
   return (

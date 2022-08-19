@@ -1,6 +1,6 @@
 import {React,useState} from 'react'
 //maybe move all non input related logic into respective components such as main and fave
-export default function Inputs({setToFrom}) {
+export default function Inputs({setToFrom,handleFave}) {
     const [to,setTo] = useState();
     const [from,setFrom] = useState();
     function handleSubmit(e){
@@ -20,6 +20,7 @@ export default function Inputs({setToFrom}) {
     <br />
     <input  type="submit" value={"Enter"} />
     </form>
+    <input type="submit" name='fave' value='⭐' onClick={handleFave}></input>
     </>
   )
 }
