@@ -1,6 +1,8 @@
 import {React,useEffect,useState} from 'react'
 import Conditions from './Conditions'
 import Inputs from './Inputs'
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { color } from '@mui/system';
 
 export default function Main({toFrom,setToFrom}) {
   
@@ -49,9 +51,11 @@ function handleFave(){
   
   return (
     <>
-    <div>Main</div>
+    <Grid2 xs={6}>
+      <div></div>
     <Inputs setToFrom={setToFrom} handleFave={handleFave}></Inputs>
     <Conditions geoTo={geoTo} geoFrom={geoFrom} toFrom={toFrom}/>
+    </Grid2>
     </>
   )
 }

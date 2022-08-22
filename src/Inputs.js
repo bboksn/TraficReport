@@ -1,4 +1,6 @@
 import {React,useState} from 'react'
+import { Button,TextField,Typography} from '@mui/material';
+
 //maybe move all non input related logic into respective components such as main and fave
 export default function Inputs({setToFrom,handleFave}) {
     const [to,setTo] = useState();
@@ -14,13 +16,13 @@ export default function Inputs({setToFrom,handleFave}) {
   return (
     <>
     <form onSubmit={handleSubmit}>
-    To: <input onChange={(e)=>setTo(e.target.value)} name='to' type="text" />
+    <Typography>To:</Typography> <TextField onChange={(e)=>setTo(e.target.value)} name='to'></TextField>
     <br />
-    From: <input onChange={(e)=>setFrom(e.target.value)} name='from' type="text" />
+    <Typography>From</Typography> <TextField onChange={(e)=>setFrom(e.target.value)} name='from' type="text"/>
     <br />
-    <input  type="submit" value={"Enter"} />
+    <Button  variant="contained" type="submit">Enter</Button>
     </form>
-    <input type="submit" name='fave' value='⭐' onClick={handleFave}></input>
+    <Button variant='contained' type="submit" name='fave'onClick={handleFave}>⭐</Button>
     </>
   )
 }
