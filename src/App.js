@@ -11,7 +11,6 @@ const [toFrom,setToFrom] = useState("");
 
   return (
     <>
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 <Grid2 container>
   <Grid2 xs={12}>
     <h1>Trafic Conditions Report</h1>
