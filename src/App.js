@@ -7,7 +7,7 @@ import Navbar from './Navbar'
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 function App() {
 const [toFrom,setToFrom] = useState("");
-
+console.log("app being rendered")
 
   return (
     <>
@@ -23,6 +23,7 @@ const [toFrom,setToFrom] = useState("");
       <Route path="about" element={<About/>}></Route>
     </Routes>
     </Grid2>
+    
     </>
    );
 }

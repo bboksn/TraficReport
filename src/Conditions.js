@@ -3,9 +3,14 @@ import {React,useState,useEffect} from 'react'
 export default function Conditions({geoTo,geoFrom,toFrom}) {
   const [conditionState,setConditionState] = useState(['hi']);
   useEffect(() => {
-    fetch(` http://www.mapquestapi.com/traffic/v2/incidents?key=QooMQfx1Qpr6JFyRPcHdnB32H4atd2wR&boundingBox=${geoTo.lat},${geoTo.lng},${geoFrom.lat},${geoFrom.lng}&filters=congestion`)
+    //console.log(geoTo,geoFrom)
+    fetch(`http://www.mapquestapi.com/traffic/v2/incidents?key=QooMQfx1Qpr6JFyRPcHdnB32H4atd2wR&boundingBox=${geoTo.lat},${geoTo.lng},${geoFrom.lat},${geoFrom.lng}&filters=construction,incidents}&filters=congestion`)
+    
     .then(response=>response.json())
-    .then(data=>setConditionState(data.incidents))
+    .then(data=>{
+      
+      console.log(data)
+      setConditionState(data.incidents)})
     console.log(conditionState)
    
   }, [geoTo,geoFrom])
@@ -25,7 +30,7 @@ export default function Conditions({geoTo,geoFrom,toFrom}) {
   })
 }
 </ol>
-<p>{/*conditionState[0].fullDesc*/}</p>
+<p>{conditionState[0].fullDesc}</p>
     
     </>
   )
